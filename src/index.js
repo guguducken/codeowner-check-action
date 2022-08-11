@@ -25,3 +25,5 @@ async function run() {
         core.setFailed(error.msg);
     }
 }
+
+run();
