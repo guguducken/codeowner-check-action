@@ -14,7 +14,7 @@ async function run() {
         //get pull request num
         const num = context.payload?.pull_request?.number;
 
-        const { files } = await octokit.rest.pulls.listFiles(
+        const { data: files } = await octokit.rest.pulls.listFiles(
             {
                 ...context.repo,
                 pull_number: num,
