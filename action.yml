@@ -1,0 +1,17 @@
+name: "Check codeowner approve"
+description: "Add labels based on pull request change sizes"
+
+inputs:
+  github-token:
+    description: "GitHub token for access GitHub repository"
+    required: true
+
+outputs:
+  isAllApprove:
+    description: "wether all code owner approve"
+runs:
+  using: "node16"
+  main: "src/index.js"
+branding:
+  icon: "tag"
+  color: "blue"
